@@ -6,7 +6,7 @@ export default function OneStat({ label, percentage }) {
       <span>{label}</span>
       <span>{percentage}%</span>
     </li>
-  );
+  )
 }
 
 OneStat.propTypes = {
