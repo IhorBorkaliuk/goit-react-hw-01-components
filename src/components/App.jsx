@@ -1,9 +1,10 @@
 import Profile from "./Profile/Profile";
 import Statistics from "./Statistic/Statistics";
 import FriendList from "./FriendList/FriendList";
-import user from "../user.json"
-import data from "../data.json";
-import friends from "../friends.json"
+
+import user from 'json/user.json'
+import data from 'json/data.json'
+import friends from 'json/friends.json'
 
 
 
