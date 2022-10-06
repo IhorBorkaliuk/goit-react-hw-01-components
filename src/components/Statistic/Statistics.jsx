@@ -4,6 +4,7 @@ import OneStat from './OneStat';
 
 
 export default function Statistics({ title, stats }) {
+  
     return (
       <section className="statistics">
             {title && <h2>{title}</h2>}
@@ -14,7 +15,8 @@ export default function Statistics({ title, stats }) {
           ))}
         </ul>
       </section>
-    );
+  );
+  
 } 
 
 

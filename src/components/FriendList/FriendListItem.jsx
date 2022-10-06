@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
 
-export default function FriendListItem({ avatar, name, isOnline }) {
+export default function FriendListItem({ friend }) {
+  const { avatar, name, isOnline } = friend;
   return (
     <li className="item">
       <span className="status">{isOnline}</span>

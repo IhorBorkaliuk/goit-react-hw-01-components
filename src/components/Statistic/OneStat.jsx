@@ -1,12 +1,13 @@
 import PropTypes from 'prop-types';
 
-export default function OneStat({ label, percentage }) {
+export default function OneStat({ stats }) {
+  const { label, percentage } = stats;
   return (
     <li>
-      <span>{label}</span>
-      <span>{percentage}%</span>
+      <span className={label}>{label}</span>
+      <span className={percentage}>{percentage}%</span>
     </li>
-  )
+  );
 }
 
 OneStat.propTypes = {
