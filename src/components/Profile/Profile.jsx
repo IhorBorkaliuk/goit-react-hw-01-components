@@ -1,30 +1,31 @@
 import PropTypes from 'prop-types';
+import { ProfileWrap, Avatar, Description, Name, Tag, Loc, Stats, Label, Quentity } from './ProfileStyled';
 
-export default function Profile({ name, tag, location, avatar, stats }) {
+export default function Profile({ username, tag, location, avatar, stats }) {
   return (
-    <div className="profile">
-      <div className="description">
-        <img src={avatar} alt="User avatar" className="avatar" />
-        <p className="name">{name}</p>
-        <p className="tag">@{tag}</p>
-        <p className="location">{location}</p>
-      </div>
+    <ProfileWrap>
+      <Description>
+        <Avatar src={avatar} alt="User avatar" />
+        <Name>{username}</Name>
+        <Tag>@{tag}</Tag>
+        <Loc>{location}</Loc>
+      </Description>
 
-      <ul className="stats">
+      <Stats>
         <li>
-          <span className="label">Followers</span>
-          <span className="quantity">{stats.followers}</span>
+          <Label>Followers</Label>
+          <Quentity>{stats.followers}</Quentity>
         </li>
         <li>
-          <span className="label">Views</span>
-          <span className="quantity">{stats.views}</span>
+          <Label>Views</Label>
+          <Quentity>{stats.views}</Quentity>
         </li>
         <li>
-          <span className="label">Likes</span>
-          <span className="quantity">{stats.likes}</span>
+          <Label>Likes</Label>
+          <Quentity>{stats.likes}</Quentity>
         </li>
-      </ul>
-    </div>
+      </Stats>
+    </ProfileWrap>
   );
 }
 
