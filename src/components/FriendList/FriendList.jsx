@@ -1,14 +1,15 @@
 import PropTypes from 'prop-types';
 import FriendListItem from './FriendListItem';
+import { List } from './Friends.styled';
 
 
 export default function FriendList({ friends }) {
     return (
-        <ul>
+        <List>
             {friends.map(el => (
                 <FriendListItem key={el.id} friend={el} />
         ))}
-        </ul>
+        </List>
     )
 }
 
