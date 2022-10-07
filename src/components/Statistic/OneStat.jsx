@@ -1,12 +1,13 @@
 import PropTypes from 'prop-types';
+import { Label, Element, Percentage } from './Statistics.styled';
 
 export default function OneStat({ stats }) {
   const { label, percentage } = stats;
   return (
-    <li>
-      <span className={label}>{label}</span>
-      <span className={percentage}>{percentage}%</span>
-    </li>
+    <Element>
+      <Label>{label}</Label>
+      <Percentage>{percentage}%</Percentage>
+    </Element>
   );
 }
 

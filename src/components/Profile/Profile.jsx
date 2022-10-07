@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import { ProfileWrap, Avatar, Description, Name, Tag, Loc, Stats, Label, Quentity } from './ProfileStyled';
+import { ProfileWrap, Avatar, Description, Name, Tag, Loc, Stats, Label, Quentity } from './Profile.styled';
 
 export default function Profile({ username, tag, location, avatar, stats }) {
   return (

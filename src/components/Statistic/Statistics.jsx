@@ -1,20 +1,21 @@
 import PropTypes from 'prop-types';
 import OneStat from './OneStat';
+import { StatisticsStyle, StatList } from './Statistics.styled';
 
 
 
 export default function Statistics({ title, stats }) {
   
     return (
-      <section className="statistics">
+      <StatisticsStyle>
             {title && <h2>{title}</h2>}
 
-        <ul className="stat-list">
+        <StatList>
           {stats.map(el => (
             <OneStat key={el.id} stats={el} />
           ))}
-        </ul>
-      </section>
+        </StatList>
+      </StatisticsStyle>
   );
   
 } 
