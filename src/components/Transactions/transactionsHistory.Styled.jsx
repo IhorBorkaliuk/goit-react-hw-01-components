@@ -19,15 +19,28 @@ export const Caption = styled.thead`
   text-align: left;
   font-weight: bold;
 `;
+
+export const TBODY = styled.tbody`
+`
+
 export const TH = styled.th`
   text-align: center;
-  font-size: 22px;
+  font-size: 16px;
+  font-weight: 300;
+  padding: 12px 10px;
+  color: green;
+  border-top: 1px solid black;
+`;
+
+export const TR = styled.tr`
+
+`;
+
+export const TRH = styled.th`
+  text-align: center;
+  font-size: 26px;
   font-weight: 300;
   padding: 12px 10px;
   border-bottom: 2px solid green;
   color: green;
-`;
-
-export const TR = styled.tr`
-  border-bottom: 2px solid #f56433;
 `;
