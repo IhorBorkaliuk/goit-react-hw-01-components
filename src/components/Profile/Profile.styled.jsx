@@ -1,51 +1,71 @@
 import styled from "@emotion/styled";
 
 export const ProfileWrap = styled.div`
-  padding: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 400px;
+  margin-top: 30px;
+  padding-top: 15px;
   background-color: rgb(210, 218, 216);
 `;
 
 export const Description = styled.div`
   text-align: center;
-  font-weight: 500;
   font-size: 25px;
-  border-bottom: 5px solid black;
 `;
 
 
 export const Avatar = styled.img`
   display: block;
-  width: 300px;
+  width: 150px;
   margin-left: auto;
   margin-right: auto;
-  background-color: rgb(201, 122, 201);
-  border-radius: 15px;
+  background-color: white;
+  border-radius: 40px;
 `;
 
 export const Name = styled.p`
+  font-size: 25px;
+  font-weight: 700;
+  margin: 15px 0px;
 `;
 
 export const Tag = styled.p`
+  font-size: 20px;
   font-style: italic;
 `;
 
 export const Loc = styled.p`
-  font-size: 18px;
+  font-size: 20px;
+  font-weight: 500;
 `;
 
 export const Stats = styled.ul`
+  list-style: none;
   display: flex;
-  justify-content: space-around;
+  margin: 0;
+  padding: 0;
+`;
 
-  list-style-type: none;
-  text-align: center;
+export const StatsElement = styled.li`
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  border: 1px solid black;
+  width: 33.33%;
+  padding: 12px;
+  align-items: center;
+  justify-content: center;
+  background-color: #e8eaf1;
 `;
 
 export const Label = styled.p`
   font-size: 20px;
+  font-weight: 500;
 `;
 
 export const Quentity = styled.p`
   font-weight: 500;
-  font-size: 17px;
+  font-size: 24px;
+  font-style: italic;
 `;

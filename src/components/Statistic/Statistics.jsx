@@ -25,3 +25,8 @@ Statistics.propTypes = {
   title: PropTypes.string,
   stats: PropTypes.array,
 };
+
+
+export function getRandomHexColor() {
+  return `#${Math.floor(Math.random() * 16777215).toString(16)}`;
+}

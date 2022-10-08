@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import { ProfileWrap, Avatar, Description, Name, Tag, Loc, Stats, Label, Quentity } from './Profile.styled';
+import { ProfileWrap, Avatar, Description, Name, Tag, Loc, Stats, StatsElement, Label, Quentity } from './Profile.styled';
 
 export default function Profile({ username, tag, location, avatar, stats }) {
   return (
@@ -12,18 +12,18 @@ export default function Profile({ username, tag, location, avatar, stats }) {
       </Description>
 
       <Stats>
-        <li>
+        <StatsElement>
           <Label>Followers</Label>
           <Quentity>{stats.followers}</Quentity>
-        </li>
-        <li>
+        </StatsElement>
+        <StatsElement>
           <Label>Views</Label>
           <Quentity>{stats.views}</Quentity>
-        </li>
-        <li>
+        </StatsElement>
+        <StatsElement>
           <Label>Likes</Label>
           <Quentity>{stats.likes}</Quentity>
-        </li>
+        </StatsElement>
       </Stats>
     </ProfileWrap>
   );
