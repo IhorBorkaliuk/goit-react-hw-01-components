@@ -1,6 +1,5 @@
 import PropTypes from 'prop-types';
-import OneStat from './OneStat';
-import { StatisticsStyle, StatList } from './Statistics.styled';
+import { StatisticsStyle, StatList, Label, Element, Percentage } from './Statistics.styled';
 
 
 
@@ -11,19 +10,29 @@ export default function Statistics({ title, stats }) {
             {title && <h2>{title}</h2>}
 
         <StatList>
-          {stats.map(el => (
-            <OneStat key={el.id} stats={el} />
-          ))}
+          {stats.map(el => {
+            return (
+              <Element key={el.id}>
+                <Label>{el.label}</Label>
+                <Percentage>{el.percentage}%</Percentage>
+              </Element>
+            );
+          })}
         </StatList>
       </StatisticsStyle>
   );
-  
 } 
 
 
 Statistics.propTypes = {
   title: PropTypes.string,
-  stats: PropTypes.array,
+  stats: PropTypes.arrayOf(
+    PropTypes.exact({
+      id: PropTypes.string.isRequired,
+      label: PropTypes.string.isRequired,
+      percentage: PropTypes.number.isRequired,
+    }).isRequired
+  ),
 };
 
 
